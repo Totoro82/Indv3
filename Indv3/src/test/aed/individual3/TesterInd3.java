@@ -87,7 +87,7 @@ public class TesterInd3 {
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -95,26 +95,26 @@ public class TesterInd3 {
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_01") ;
+TestData.testName = "test_01";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_01")) ;
+ResultsHandler.startTest("test_01") ;
 return ok_sofar ;
 }
 ) ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_01")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_01") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -126,7 +126,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -134,9 +134,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_02") ;
+TestData.testName = "test_02";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_02")) ;
+ResultsHandler.startTest("test_02") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] {  })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -145,17 +145,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_02")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_02") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -167,7 +167,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -175,9 +175,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_03") ;
+TestData.testName = "test_03";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_03")) ;
+ResultsHandler.startTest("test_03") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 1 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -186,17 +186,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_03")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_03") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -208,7 +208,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -216,9 +216,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_04") ;
+TestData.testName = "test_04";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_04")) ;
+ResultsHandler.startTest("test_04") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 1,2 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -227,17 +227,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_04")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_04") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -249,7 +249,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -257,9 +257,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_05") ;
+TestData.testName = "test_05";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_05")) ;
+ResultsHandler.startTest("test_05") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { -6,-13 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -268,17 +268,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_05")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_05") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -290,7 +290,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -298,9 +298,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_06") ;
+TestData.testName = "test_06";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_06")) ;
+ResultsHandler.startTest("test_06") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 0,0,1 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -309,17 +309,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_06")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_06") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -331,7 +331,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -339,9 +339,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_07") ;
+TestData.testName = "test_07";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_07")) ;
+ResultsHandler.startTest("test_07") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 1,2,3 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -350,17 +350,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_07")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_07") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -372,7 +372,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -380,9 +380,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_08") ;
+TestData.testName = "test_08";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_08")) ;
+ResultsHandler.startTest("test_08") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 2,4,6 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -391,17 +391,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_08")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_08") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -413,7 +413,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -421,9 +421,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_09") ;
+TestData.testName = "test_09";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_09")) ;
+ResultsHandler.startTest("test_09") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { -3,15,15 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -432,17 +432,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_09")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_09") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -454,7 +454,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -462,9 +462,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_10") ;
+TestData.testName = "test_10";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_10")) ;
+ResultsHandler.startTest("test_10") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 1,1,-1 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -473,17 +473,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_10")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_10") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -495,7 +495,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -503,9 +503,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_11") ;
+TestData.testName = "test_11";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_11")) ;
+ResultsHandler.startTest("test_11") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 4,-4,-12 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -514,17 +514,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_11")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_11") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -536,7 +536,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -544,9 +544,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_12") ;
+TestData.testName = "test_12";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_12")) ;
+ResultsHandler.startTest("test_12") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 6,4,2 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -555,17 +555,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_12")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_12") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -577,7 +577,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -585,9 +585,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_13") ;
+TestData.testName = "test_13";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_13")) ;
+ResultsHandler.startTest("test_13") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 7,7,7 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -596,17 +596,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_13")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_13") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -618,7 +618,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -626,9 +626,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_14") ;
+TestData.testName = "test_14";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_14")) ;
+ResultsHandler.startTest("test_14") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 9,-4,3 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -637,17 +637,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_14")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_14") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -659,7 +659,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -667,9 +667,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_15") ;
+TestData.testName = "test_15";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_15")) ;
+ResultsHandler.startTest("test_15") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { -7,3,13,23 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -678,17 +678,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_15")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_15") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -700,7 +700,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -708,9 +708,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_16") ;
+TestData.testName = "test_16";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_16")) ;
+ResultsHandler.startTest("test_16") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 2,8,14,20 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -719,17 +719,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_16")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_16") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -741,7 +741,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -749,9 +749,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_17") ;
+TestData.testName = "test_17";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_17")) ;
+ResultsHandler.startTest("test_17") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 4,-1,7,-6 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -760,17 +760,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_17")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_17") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -782,7 +782,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -790,9 +790,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_18") ;
+TestData.testName = "test_18";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_18")) ;
+ResultsHandler.startTest("test_18") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { -4,-2,0,2,4 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -801,17 +801,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_18")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_18") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -823,7 +823,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -831,9 +831,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_19") ;
+TestData.testName = "test_19";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_19")) ;
+ResultsHandler.startTest("test_19") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 4,2,0,-2,-4 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -842,17 +842,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_19")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_19") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -864,7 +864,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -872,9 +872,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_20") ;
+TestData.testName = "test_20";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_20")) ;
+ResultsHandler.startTest("test_20") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { -3,-1,1,3,5 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -883,17 +883,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_20")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_20") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -905,7 +905,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -913,9 +913,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_21") ;
+TestData.testName = "test_21";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_21")) ;
+ResultsHandler.startTest("test_21") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { -1,-4,-7,-10,-13 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -924,17 +924,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_21")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_21") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -946,7 +946,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -954,9 +954,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_22") ;
+TestData.testName = "test_22";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_22")) ;
+ResultsHandler.startTest("test_22") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 0,0,0,0,0 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -965,17 +965,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_22")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_22") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -987,7 +987,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -995,9 +995,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_23") ;
+TestData.testName = "test_23";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_23")) ;
+ResultsHandler.startTest("test_23") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 1,-1,-3,-5,-7 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -1006,17 +1006,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_23")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_23") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1028,7 +1028,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1036,9 +1036,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_24") ;
+TestData.testName = "test_24";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_24")) ;
+ResultsHandler.startTest("test_24") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 4,3,2,null,1 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -1047,17 +1047,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_24")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_24") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1069,7 +1069,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1077,9 +1077,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_25") ;
+TestData.testName = "test_25";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_25")) ;
+ResultsHandler.startTest("test_25") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { -4,-2,0,2,4,5 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -1088,17 +1088,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_25")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_25") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1110,7 +1110,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1118,9 +1118,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_26") ;
+TestData.testName = "test_26";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_26")) ;
+ResultsHandler.startTest("test_26") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { -4,9,22,35,48,61 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -1129,17 +1129,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_26")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_26") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1151,7 +1151,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1159,9 +1159,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_27") ;
+TestData.testName = "test_27";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_27")) ;
+ResultsHandler.startTest("test_27") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { -2,0,2,4,6,8 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -1170,17 +1170,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_27")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_27") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1192,7 +1192,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1200,9 +1200,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_28") ;
+TestData.testName = "test_28";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_28")) ;
+ResultsHandler.startTest("test_28") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 0,-10,-20,-30,-40,-50 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -1211,17 +1211,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_28")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_28") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1233,7 +1233,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1241,9 +1241,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_29") ;
+TestData.testName = "test_29";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_29")) ;
+ResultsHandler.startTest("test_29") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 0,0,0,0,0,0 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -1252,17 +1252,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_29")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_29") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1274,7 +1274,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1282,9 +1282,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_30") ;
+TestData.testName = "test_30";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_30")) ;
+ResultsHandler.startTest("test_30") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 1,10,19,28,37,46 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -1293,17 +1293,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_30")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_30") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1315,7 +1315,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1323,9 +1323,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_31") ;
+TestData.testName = "test_31";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_31")) ;
+ResultsHandler.startTest("test_31") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 2,-4,-10,-16,-22,-2 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -1334,17 +1334,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_31")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_31") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1356,7 +1356,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1364,9 +1364,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_32") ;
+TestData.testName = "test_32";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_32")) ;
+ResultsHandler.startTest("test_32") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { -6,1,3,8,15,22,29 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -1375,17 +1375,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_32")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_32") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1397,7 +1397,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1405,9 +1405,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_33") ;
+TestData.testName = "test_33";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_33")) ;
+ResultsHandler.startTest("test_33") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 0,13,8,26,39,52,null })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -1416,17 +1416,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_33")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_33") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1438,7 +1438,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1446,9 +1446,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_34") ;
+TestData.testName = "test_34";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_34")) ;
+ResultsHandler.startTest("test_34") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 2,4,-4,-10,-16,-22,-28 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -1457,17 +1457,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_34")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_34") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1479,7 +1479,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1487,9 +1487,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_35") ;
+TestData.testName = "test_35";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_35")) ;
+ResultsHandler.startTest("test_35") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { -1,3,7,11,null,null,15,19 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -1498,17 +1498,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_35")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_35") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1520,7 +1520,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1528,9 +1528,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_36") ;
+TestData.testName = "test_36";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_36")) ;
+ResultsHandler.startTest("test_36") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 1,2,3,4,null,5,6,-2 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -1539,17 +1539,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_36")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_36") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1561,7 +1561,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1569,9 +1569,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_37") ;
+TestData.testName = "test_37";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_37")) ;
+ResultsHandler.startTest("test_37") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 14,-2,-18,-34,-50,-66,-82,-98 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -1580,17 +1580,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_37")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_37") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1602,7 +1602,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1610,9 +1610,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_38") ;
+TestData.testName = "test_38";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_38")) ;
+ResultsHandler.startTest("test_38") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { -11,2,null,null,-9,15,28,41,54 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -1621,17 +1621,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_38")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_38") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1643,7 +1643,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1651,9 +1651,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_39") ;
+TestData.testName = "test_39";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_39")) ;
+ResultsHandler.startTest("test_39") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { -4,-4,-4,-4,-4,-4,-4,-4,-4 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -1662,17 +1662,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_39")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_39") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1684,7 +1684,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1692,9 +1692,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_40") ;
+TestData.testName = "test_40";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_40")) ;
+ResultsHandler.startTest("test_40") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { -4,-1,2,5,8,-4,11,null,14 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -1703,17 +1703,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_40")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_40") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1725,7 +1725,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1733,9 +1733,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_41") ;
+TestData.testName = "test_41";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_41")) ;
+ResultsHandler.startTest("test_41") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { -1,-1,-1,-1,-1,-1,-1,null,-1 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -1744,17 +1744,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_41")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_41") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1766,7 +1766,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1774,9 +1774,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_42") ;
+TestData.testName = "test_42";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_42")) ;
+ResultsHandler.startTest("test_42") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 0,-4,null,-8,-12,-16,2,-20,-24 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -1785,17 +1785,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_42")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_42") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1807,7 +1807,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1815,9 +1815,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_43") ;
+TestData.testName = "test_43";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_43")) ;
+ResultsHandler.startTest("test_43") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { -12,0,12,24,36,48,60,null,-8,72 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -1826,17 +1826,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_43")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_43") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1848,7 +1848,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1856,9 +1856,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_44") ;
+TestData.testName = "test_44";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_44")) ;
+ResultsHandler.startTest("test_44") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 5,-5,-15,-25,0,-35,-45,-55,-65,null })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -1867,17 +1867,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_44")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_44") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1889,7 +1889,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1897,9 +1897,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_45") ;
+TestData.testName = "test_45";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_45")) ;
+ResultsHandler.startTest("test_45") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 5,8,3,-2,-7,-12,-17,-22,-27,-32 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -1908,17 +1908,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_45")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_45") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1930,7 +1930,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1938,9 +1938,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_46") ;
+TestData.testName = "test_46";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_46")) ;
+ResultsHandler.startTest("test_46") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { -14,6,26,46,66,86,14,106,126,146,166 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -1949,17 +1949,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_46")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_46") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -1971,7 +1971,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -1979,9 +1979,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_47") ;
+TestData.testName = "test_47";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_47")) ;
+ResultsHandler.startTest("test_47") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { -1,1,3,5,7,9,11,13,15,17,0 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -1990,17 +1990,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_47")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_47") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -2012,7 +2012,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -2020,9 +2020,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_48") ;
+TestData.testName = "test_48";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_48")) ;
+ResultsHandler.startTest("test_48") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 0,-1,-2,-3,-4,-5,-3,-6,-7,-8,-9 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -2031,17 +2031,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_48")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_48") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -2053,7 +2053,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -2061,9 +2061,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_49") ;
+TestData.testName = "test_49";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_49")) ;
+ResultsHandler.startTest("test_49") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 2,-1,null,null,-4,-7,4,-10,-13,-16,-19 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -2072,17 +2072,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_49")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_49") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -2094,7 +2094,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -2102,9 +2102,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_50") ;
+TestData.testName = "test_50";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_50")) ;
+ResultsHandler.startTest("test_50") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 6,-3,-12,-21,-30,-39,-48,-57,-16,-66,-75 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -2113,17 +2113,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_50")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_50") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -2135,7 +2135,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -2143,9 +2143,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_51") ;
+TestData.testName = "test_51";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_51")) ;
+ResultsHandler.startTest("test_51") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 8,-5,3,null,null,-18,-31,-44,-57,-70,-83 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -2154,17 +2154,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_51")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_51") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -2176,7 +2176,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -2184,9 +2184,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_52") ;
+TestData.testName = "test_52";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_52")) ;
+ResultsHandler.startTest("test_52") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 0,0,0,0,0,0,0,null,0,0,0,0 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -2195,17 +2195,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_52")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_52") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -2217,7 +2217,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -2225,9 +2225,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_53") ;
+TestData.testName = "test_53";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_53")) ;
+ResultsHandler.startTest("test_53") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 6,-6,-6,-18,-30,-42,-54,-66,-78,-90,-102,-114 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -2236,17 +2236,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_53")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_53") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -2258,7 +2258,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -2266,9 +2266,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_54") ;
+TestData.testName = "test_54";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_54")) ;
+ResultsHandler.startTest("test_54") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { -13,-1,11,23,35,47,59,71,0,83,95,107,119 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -2277,17 +2277,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_54")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_54") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -2299,7 +2299,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -2307,9 +2307,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_55") ;
+TestData.testName = "test_55";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_55")) ;
+ResultsHandler.startTest("test_55") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 1,0,-1,-2,null,-3,-4,-5,null,-6,-7,-8,-9 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -2318,17 +2318,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_55")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_55") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -2340,7 +2340,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -2348,9 +2348,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_56") ;
+TestData.testName = "test_56";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_56")) ;
+ResultsHandler.startTest("test_56") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 11,8,5,2,-1,-4,-7,-10,-13,-16,-19,-22,-25 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -2359,17 +2359,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_56")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_56") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -2381,7 +2381,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -2389,9 +2389,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_57") ;
+TestData.testName = "test_57";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_57")) ;
+ResultsHandler.startTest("test_57") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { -3,-2,3,9,15,21,27,33,39,45,51,null,57,63 })).doCall().checkResult(false) ;
 return ok_sofar ;
@@ -2400,17 +2400,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_57")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_57") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -2422,7 +2422,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -2430,9 +2430,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_58") ;
+TestData.testName = "test_58";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_58")) ;
+ResultsHandler.startTest("test_58") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 1,1,1,1,null,1,1,null,1,null,null,1,null,1 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -2441,17 +2441,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_58")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_58") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -2463,7 +2463,7 @@ return ok_sofar ;
   {
     if (ResultsHandler.isTimedout())
     {
-      Assertions.assertTrue(false,new String("Testing stopped due to global timeout -- too slow execution")) ;
+        fail("Testing stopped due to global timeout -- too slow execution");
     }
     boolean resultIs = true ;
     try
@@ -2471,9 +2471,9 @@ return ok_sofar ;
       resultIs = Assertions.assertTimeoutPreemptively(Duration.ofSeconds(10), ()  -> {
 TesterCode.resetPrinter() ;
 TestData.initTrace() ;
-TestData.testName = new String("test_59") ;
+TestData.testName = "test_59";
 boolean ok_sofar = true ;
-ResultsHandler.startTest(new String("test_59")) ;
+ResultsHandler.startTest("test_59") ;
 if (ok_sofar)
   ok_sofar = new IsArithmeticSequence(new NodePositionList<Integer>(new Integer[] { 3,-2,-7,-12,null,-17,null,null,-22,-27,-32,-37,-42,-47 })).doCall().checkResult(true) ;
 return ok_sofar ;
@@ -2482,17 +2482,17 @@ return ok_sofar ;
     }
     catch ( org.opentest4j.AssertionFailedError exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.DURING,new String("*** TIMEOUT! *** Very slow or non-terminating execution"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.DURING, "*** TIMEOUT! *** Very slow or non-terminating execution",exc) ;
       resultIs = false ;
     }
     catch ( Throwable exc )
     {
-      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED,new String("Internal testing error; please report this to teachers"),exc) ;
+      TestUtils.printCallException(TestUtils.ExecutionTime.UNRELATED, "Internal testing error; please report this to teachers",exc) ;
       resultIs = false ;
     }
     String messages = TestData.getMessages() ;
-    ResultsHandler.stopTest(new String("test_59")) ;
-    ResultsHandler.add_result(new String("isArithmeticSequence"),resultIs) ;
+    ResultsHandler.stopTest("test_59") ;
+    ResultsHandler.add_result("isArithmeticSequence",resultIs) ;
     if (messages.length() > 0)
       System.out.println(messages) ;
     if (!resultIs)
@@ -2545,7 +2545,7 @@ static class TestUtils {
       return "null";
 
     if (obj instanceof String) {
-      return("\""+obj.toString()+"\"");
+      return("\""+ obj +"\"");
     } else if (obj instanceof Position<?>) {
       return obj.toString();
     } else if (obj instanceof Pair<?,?>) {
@@ -2827,7 +2827,7 @@ static class TestUtils {
     if (!checkResult)
       printError
         (ExecutionTime.DURING,
-         "the call "+call.toString()+
+         "the call "+ call +
          " returned a value "+TestUtils.print(result.getValue())+
          "\nwhich was not included among the expected values\n"+
          TestUtils.print(expected));
@@ -2926,10 +2926,7 @@ static class TestUtils {
         if (si == null) si = 0;
         s2.put(f,si+1);
       }
-      if (!s1.equals(s2)) 
-        return false;
-      else
-        return true;
+        return s1.equals(s2);
     } else {
       if (!(valueP instanceof Iterable<?>))
         System.out.println
@@ -3003,9 +3000,7 @@ static class TestUtils {
         if (!e2.equals(e1)) return false;
       }
 
-      if (it1.hasNext() != it2.hasNext())
-        return false;
-      return true;
+        return it1.hasNext() == it2.hasNext();
 
     } else {
       if (!(valueP instanceof Iterable<?>))
@@ -3280,11 +3275,7 @@ static class TestUtils {
   }
 
   static <E> boolean unchanged(String callString, E[] original, PositionList<E> l) {
-      boolean ok_sofar = true;
-      
-      if (l.size() != original.length) {
-	  ok_sofar = false;
-      }
+      boolean ok_sofar = l.size() == original.length;
 
       Position<E> lPos = l.first();
       int i=0;
@@ -3310,11 +3301,7 @@ static class TestUtils {
   }
 
   static <E> boolean unchanged(String callString, E[] original, E[] newer) {
-      boolean ok_sofar = true;
-      
-      if (newer.length != original.length) {
-	  ok_sofar = false;
-      }
+      boolean ok_sofar = newer.length == original.length;
 
       for (int i=0; i<newer.length; i++) {
 	  if (newer[i] == null) ok_sofar = (original[i] == null);
@@ -3476,8 +3463,10 @@ static class TestUtils {
         if (parameterTypes.length == params.length) {
           boolean equals = true;
           for (int i=0; i<parameterTypes.length && equals; i++) {
-            if (!parameterTypes[i].isInstance(params[i]))
-              equals = false;
+              if (!parameterTypes[i].isInstance(params[i])) {
+                  equals = false;
+                  break;
+              }
           }
           if (equals) {
             cnstr.setAccessible(true);
@@ -3732,11 +3721,7 @@ static abstract class TestCall<E,F> implements Call<E,F> {
   }
 
   boolean unchanged_array(Object[] original, Object[] newer) {
-      boolean ok_sofar = true;
-      
-      if (newer.length != original.length) {
-	  ok_sofar = false;
-      }
+      boolean ok_sofar = newer.length == original.length;
 
       for (int i=0; i<newer.length; i++) {
 	  if (newer[i] == null) ok_sofar = (original[i] == null);
@@ -3755,11 +3740,7 @@ static abstract class TestCall<E,F> implements Call<E,F> {
   }
 
   boolean unchanged_array(int[] original, int[] newer) {
-      boolean ok_sofar = true;
-      
-      if (newer.length != original.length) {
-	  ok_sofar = false;
-      }
+      boolean ok_sofar = newer.length == original.length;
 
       for (int i=0; i<newer.length; i++) {
 	  ok_sofar = newer[i] == original[i];
@@ -3777,11 +3758,7 @@ static abstract class TestCall<E,F> implements Call<E,F> {
   }
 
   boolean unchanged_array(char[] original, char[] newer) {
-      boolean ok_sofar = true;
-      
-      if (newer.length != original.length) {
-	  ok_sofar = false;
-      }
+      boolean ok_sofar = newer.length == original.length;
 
       for (int i=0; i<newer.length; i++) {
 	  ok_sofar = newer[i] == original[i];
@@ -3959,12 +3936,11 @@ static class IsArithmeticSequence extends TestCall<Boolean,Boolean>
   
   public String toString () 
   {
-    StringBuilder output = new StringBuilder() ;
-    output.append(new String("Utils.isArithmeticSequence")) ;
-    output.append(new String("(")) ;
-    output.append(TesterCode.printer(x_1_orig)) ;
-    output.append(new String(")")) ;
-    return output.toString() ;
+      String output = "Utils.isArithmeticSequence" +
+              "(" +
+              TesterCode.printer(x_1_orig) +
+              ")";
+    return output;
   }
   
   public Boolean call () 
@@ -3982,9 +3958,7 @@ static class IsArithmeticSequence extends TestCall<Boolean,Boolean>
       return false ;
     if (!unchanged(x_1,x_1_orig))
       return false ;
-    if (!valuesMatch(expected))
-      return false ;
-    return true ;
+      return valuesMatch(expected);
   }
   
 }
@@ -4104,7 +4078,7 @@ static class ResultsHandler {
 
   static void setNumTestsRemaining(int numTestsToRun, int GlobalTimeoutInSeconds) {
     numTestsRemaining = numTestsToRun;
-    endTime = System.currentTimeMillis() + GlobalTimeoutInSeconds*1000;
+    endTime = System.currentTimeMillis() + GlobalTimeoutInSeconds* 1000L;
   }
 
   static boolean isTimedout() {
@@ -4197,7 +4171,7 @@ static class ResultsHandler {
         {
           stream.forEach(s -> sb.append(s).append("\n"));
         }
-      catch (IOException e) {};
+      catch (IOException e) {}
     }
  
     return sb.toString();
